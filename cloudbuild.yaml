@@ -10,7 +10,7 @@ steps:
   # Push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/backend-service:$COMMIT_SHA']
-    ooptions:
+    options:
       logging: CLOUD_LOGGING_ONLY
     # env: 
     #  - 'DATABASE_URL=${_DATABASE_URL}'
