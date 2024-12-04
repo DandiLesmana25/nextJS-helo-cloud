@@ -69,6 +69,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_PRIVATE_KEY }}
+          port: 2252 # Specify the custom SSH port
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/nextjs:${{ github.sha }}
             docker stop nextjs || true
